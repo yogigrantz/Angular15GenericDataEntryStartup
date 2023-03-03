@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ListMerchandise } from '../data/list_marchandise';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+
+  constructor(public listMerchandise: ListMerchandise) {
+     this.listMerchandise.items = ListMerchandise.itemsPermanent;
+  }
 
 }

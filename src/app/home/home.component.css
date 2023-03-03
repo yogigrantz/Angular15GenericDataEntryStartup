@@ -5,3 +5,34 @@
 .space50 {
   height:50px;
 }
+
+.floatLeft {
+  float:left;
+}
+
+.percent30 {
+  width:30%;
+}
+
+.percent60 {
+  width:30%;
+}
+
+.tableData {
+  width:1000px;
+}
+.tableData th {
+  text-align:left;
+}
+
+.tableData .editColumn {
+  width:110px;
+}
+
+.tableData .description {
+  width:500px;
+}
+
+.tableData .title {
+  width: 200;
+}

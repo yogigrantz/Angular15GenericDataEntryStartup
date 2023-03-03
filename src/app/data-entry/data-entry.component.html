@@ -22,11 +22,51 @@
 </div>
 <div class="floatLeft percent60">
   <h1>Data</h1>
-  <table *ngIf="listMerchandise" >
+  <table class="tableData" *ngIf="listMerchandise.items" >
+    <tr>
+      <th class="title">Title</th>
+      <th class="description">Description</th>
+      <th>Price</th>
+      <th class="editColumn"></th>
+      <th class="editColumn"></th>
+    </tr>
     <tr *ngFor="let i of listMerchandise.items">
       <td>{{i.title}}</td>
       <td>{{i.description}}</td>
-      <td>{{i.price}}</td>
+      <td>${{i.price}}</td>
+      <td><button  (click)="Edit(i.Id)">Update</button></td>
+      <td><button  (click)="Delete(i.Id)">Delete</button></td>
     </tr>
   </table>
+  <div class="top10">
+    <input class="text500" type="text" placeholder="WebAPI URL">
+  </div>
+  <div class="top10">
+    <button class="big" (click)="PostToWebAPI()">Post to Permanent Collection</button>
+  </div>
 </div>
+
+
+<div>
+  <cc-modal id="modal-1">
+      <div class="modal-header" >
+          <h1>
+              Confirmation
+          </h1>
+      </div>
+      <div class="modal-body">
+          
+           <h2>Your items have been posted to the UI Permanent collection</h2>
+          
+          <p>
+              <strong>What it means:</strong><br>
+              When you click "Home", you will see your items listed there because they are in a static array.
+              In a real application, this collection could be posted to WebAPI for further processing
+          </p>
+
+          <div style="padding-top:15px;">
+              <button  (click)="modalService.close();">OK</button>
+          </div>
+     </div>
+  </cc-modal>
+ 

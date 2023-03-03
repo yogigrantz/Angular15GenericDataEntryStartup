@@ -1,18 +1,23 @@
 .header {
-  height:100px;
+  height:110px;
   border-bottom: solid 1px #c0c0c0;
-  background-color:#dedede;
+  background-color:#777777;
 }
 .header .logo {
-  height: 70px;
+  height: 110px;
   font-size:2em;
   font-weight:bold;
   margin-left:30px;
-  margin-top: 20px;
+  margin-top: 10px;
   position:absolute;
 }
+
+.header .logo img {
+  height:90px;
+}
+
 .menu {
-  margin-top:80px;
+  margin-top:110px;
   padding-left:50px;
   padding-top:5px;
   padding-bottom: 5px;
@@ -32,3 +37,5 @@
   padding:20px;
   height:100px;
 }
+
+

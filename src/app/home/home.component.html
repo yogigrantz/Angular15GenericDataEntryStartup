@@ -1,6 +1,18 @@
 <h1>List of items</h1>
 
-<div class="space50"></div>
-<div class="row">
-
-</div>
+<div class="floatLeft percent60">
+    <h1>Data</h1>
+    <table class="tableData" *ngIf="listMerchandise.items" >
+      <tr>
+        <th class="title">Title</th>
+        <th class="description">Description</th>
+        <th>Price</th>
+      </tr>
+      <tr *ngFor="let i of listMerchandise.items">
+        <td>{{i.title}}</td>
+        <td>{{i.description}}</td>
+        <td>${{i.price}}</td>
+      </tr>
+    </table>
+  </div>
+  

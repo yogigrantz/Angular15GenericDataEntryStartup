@@ -35,3 +35,51 @@
 .percent60 {
   width:30%;
 }
+
+.pointer {
+  cursor:pointer;
+}
+
+input, textarea, td {
+  padding:5px;
+}
+
+button {
+  padding:5px;
+  width:100px;
+  height:40px;
+  cursor:pointer;
+}
+
+.big {
+  width:120px;
+  height:60px;
+}
+
+.text500 {
+  width:500px;
+}
+
+.top10 {
+  margin-top:10px;
+}
+
+.tableData {
+  width:1000px;
+}
+.tableData th {
+  text-align:left;
+}
+
+.tableData .editColumn {
+  width:110px;
+}
+
+.tableData .description {
+  width:500px;
+}
+
+.tableData .title {
+  width: 200;
+}
+
