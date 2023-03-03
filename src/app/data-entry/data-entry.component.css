@@ -1,0 +1,37 @@
+
+
+.row {
+  clear:both;
+}
+
+.label, .textbox {
+  float:left;
+  width:150px;
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-left:5px;
+  border-top:solid 1px #808080;
+}
+
+
+.textbox {
+  width:250px;
+  background-color:#c8c8c8;
+}
+
+.desc {
+  width:200px;
+  height:150px;
+}
+
+.floatLeft {
+  float:left;
+}
+
+.percent30 {
+  width:30%;
+}
+
+.percent60 {
+  width:30%;
+}

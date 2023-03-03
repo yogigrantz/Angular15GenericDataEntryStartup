@@ -1,0 +1,32 @@
+
+<div class="floatLeft percent30">
+  <h1>Data Entry</h1>
+  <div class="dataentry">
+    <div class="row">
+      <div class="label">Title</div>
+      <div class="textbox"><input [(ngModel)]="merchandise.title" type="text"></div>
+    </div>
+    <div class="row">
+      <div class="label">Description</div>
+      <div class="textbox"><textarea [(ngModel)]="merchandise.description" class="desc"></textarea></div>
+    </div>
+    <div class="row">
+      <div class="label">Price</div>
+      <div class="textbox"><input [(ngModel)]="merchandise.price" type="text"></div>
+    </div>
+    <div class="row">
+      <div class="label"></div>
+      <div class="textbox" ><button (click)="Add()">Add Data</button></div>
+    </div>
+  </div>
+</div>
+<div class="floatLeft percent60">
+  <h1>Data</h1>
+  <table *ngIf="listMerchandise" >
+    <tr *ngFor="let i of listMerchandise.items">
+      <td>{{i.title}}</td>
+      <td>{{i.description}}</td>
+      <td>{{i.price}}</td>
+    </tr>
+  </table>
+</div>
