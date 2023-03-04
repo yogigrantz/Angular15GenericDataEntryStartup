@@ -1,0 +1,12 @@
+
+<h1>Upload File</h1>
+
+<div>
+    Image file to upload: <input type="file"  (change)="onFileSelected($event)"  placeholder="Upload image" accept=".jpg,.png"  />
+
+    
+</div>
+
+<div>
+    <img [src]="url" *ngIf="url">
+</div>
