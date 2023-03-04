@@ -33,7 +33,7 @@
 }
 
 .percent60 {
-  width:30%;
+  width:60%;
 }
 
 .pointer {
@@ -81,5 +81,9 @@ button {
 
 .tableData .title {
   width: 200;
+}
+
+.tableData td, .tableData th {
+  border-bottom: solid 1px #c0c0c0;
 }
 

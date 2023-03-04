@@ -10,12 +10,12 @@
   float:left;
 }
 
-.percent30 {
-  width:30%;
+.percent20 {
+  width:20%;
 }
 
 .percent60 {
-  width:30%;
+  width:60%;
 }
 
 .tableData {
@@ -23,6 +23,8 @@
 }
 .tableData th {
   text-align:left;
+  height:40px;
+  border-bottom: solid 1px #c0c0c0;
 }
 
 .tableData .editColumn {
@@ -35,4 +37,9 @@
 
 .tableData .title {
   width: 200;
+}
+
+.tableData td {
+  height:40px;
+  border-bottom: solid 1px #c0c0c0;
 }

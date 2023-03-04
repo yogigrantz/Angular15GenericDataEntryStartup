@@ -5,15 +5,22 @@ import { ModalComponent } from '../modalComponents';
 @Injectable({ providedIn: 'root' })
 export class ModalService {
     private modals: ModalComponent[] = [];
+    public modalAlreadyExists = false;
+
+    public reset() {
+        this.modals = [];
+    }
 
     add(modal: ModalComponent) {
         // ensure component has a unique id attribute
         console.log("# of existing Modals : " + this.modals.length);
-        if (!modal.id || this.modals.find(x => x.id === modal.id)) {
-            this.close();
+        if (!modal.id || this.modals.find(x => x.id === modal.id)) 
+        {
+            this.modalAlreadyExists = true;
         }
         else
         {
+            this.modalAlreadyExists = false;
             this.modals.push(modal);
         }
     }
@@ -25,20 +32,18 @@ export class ModalService {
 
     open(id: string) {
         // open modal specified by id
-        const modal = this.modals.find(x => x.id === id);
+        let modal = this.modals.find(x => x.id === id);
 
         if (!modal) {
             throw new Error(`modal '${id}' not found`);
         }
 
-        this.close();
-
-        modal.open();
+         modal.open();
     }
 
     close() {
         // close the modal that is currently open
-        const modal = this.modals.find(x => x.isOpen);
+        let modal = this.modals.find(x => x.isOpen);
         modal?.close();
     }
 }

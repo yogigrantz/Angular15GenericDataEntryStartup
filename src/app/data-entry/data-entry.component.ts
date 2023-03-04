@@ -42,6 +42,7 @@ export class DataEntryComponent {
 
     public PostToWebAPI() {
         ListMerchandise.itemsPermanent = this.listMerchandise.items;
+        console.log(this.modalService.modalAlreadyExists);
         this.modalService.open('modal-1');
     }
 

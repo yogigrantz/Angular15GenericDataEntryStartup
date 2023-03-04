@@ -6,6 +6,10 @@ import { ModalComponentXL } from '../modalComponents/modal.component-xl';
 export class ModalServiceXL {
     private modals: ModalComponentXL[] = [];
 
+    public reset() {
+        this.modals = [];
+    }
+
     add(modal: ModalComponentXL) {
         // ensure component has a unique id attribute
         if (!modal.id || this.modals.find(x => x.id === modal.id)) {

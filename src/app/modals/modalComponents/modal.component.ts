@@ -44,13 +44,13 @@ export class ModalComponent implements OnInit, OnDestroy {
 
     open() {
         this.element.style.display = 'block';
-        document.body.classList.add('cc-modal-open');
+        document.body.classList.add('cc-modal');
         this.isOpen = true;
     }
 
     close() {
         this.element.style.display = 'none';
-        document.body.classList.remove('cc-modal-open');
+        document.body.classList.remove('cc-modal');
         this.isOpen = false;
     }
 }

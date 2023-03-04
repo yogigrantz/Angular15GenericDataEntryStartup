@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ModalService } from '../modals/modalServices';
+import { ModalServiceXL } from '../modals/modalServices/modal.serviceXL';
 
 @Component({
   selector: 'app-upload-file',
@@ -9,6 +11,11 @@ export class UploadFileComponent {
   private _file!: File;
   public fileName : string = '';
   public url: any;
+
+  constructor(protected modalService: ModalService, protected modalServiceXL: ModalServiceXL) {
+    this.modalService.reset();
+    this.modalServiceXL.reset();
+  }
 
   public  onFileSelected(event : any) {
 
