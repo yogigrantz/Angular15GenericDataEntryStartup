@@ -1,0 +1,30 @@
+input, textarea, td {
+    padding:5px;
+  }
+  
+  button {
+    padding:5px;
+    width:100px;
+    height:40px;
+    cursor:pointer;
+  }
+  
+  .text500 {
+    width:500px;
+  }
+
+  .height200 {
+    height:200px;
+  }
+  
+  .top10 {
+    margin-top:10px;
+  }
+
+  cc-modal {
+    padding:20px;
+  }
+
+  .floatLeft {
+    float:left;
+  }

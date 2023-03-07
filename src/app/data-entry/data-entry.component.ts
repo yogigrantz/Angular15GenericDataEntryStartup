@@ -11,7 +11,7 @@ import { ModalServiceXL } from '../modals/modalServices/modal.serviceXL';
 })
 export class DataEntryComponent {
     public merchandise: Merchandise = new Merchandise();
-    //public listMerchandise: ListMerchandise = new ListMerchandise();
+    
 
     constructor (public listMerchandise: ListMerchandise,  protected modalService: ModalService, protected modalServiceXL: ModalServiceXL) {
       listMerchandise = new ListMerchandise();
@@ -42,7 +42,6 @@ export class DataEntryComponent {
 
     public PostToWebAPI() {
         ListMerchandise.itemsPermanent = this.listMerchandise.items;
-        console.log(this.modalService.modalAlreadyExists);
         this.modalService.open('modal-1');
     }
 

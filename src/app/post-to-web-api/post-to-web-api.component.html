@@ -1,0 +1,29 @@
+<div class="floatLeft">
+    <h1>Post to WebAPI</h1>
+
+    <div class="top10">
+        <input [(ngModel)]="url" class="text500" type="text" placeholder="WebAPI URL" />
+    </div>
+    <div class="top10">
+        JSON Payload
+    </div>
+    <div class="top10">
+        <textarea [(ngModel)]="jsonPayload" class="text500 height200" >{}
+        </textarea>
+    </div>
+    <div class="top10">
+        <table>
+            <tr>
+                <td><button (click)="getSampleURL()">Get sample URL</button></td>
+                <td><button  (click)="postToWebAPI()">Post Now</button></td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+<div class="floatLeft">
+    <pre>
+        {{result}}
+    </pre>
+</div>
